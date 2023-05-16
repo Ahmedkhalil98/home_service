@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
+class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => Size.fromHeight(60.h);
   const AppBarWidget({super.key});
