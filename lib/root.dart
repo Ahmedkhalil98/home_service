@@ -3,7 +3,8 @@ import 'package:home_service/Core/Constants/app_routes.dart';
 import 'package:home_service/Core/MiddleWare/my_middleware.dart';
 import 'package:home_service/Screens/Auth/login_page.dart';
 import 'package:home_service/Screens/Auth/signup_screen.dart';
-import 'package:home_service/Screens/Home_Screen/home_Page.dart';
+import 'package:home_service/Screens/Home_Screen/home_page.dart';
+import 'package:home_service/Screens/Main_Screen/main_screen.dart';
 import 'package:home_service/Screens/Water_section_screens/water_page.dart';
 import 'package:home_service/Screens/conditioner_Screens/conditioner_page.dart';
 import 'package:home_service/Screens/conditioner_Screens/single_room.dart';
@@ -21,6 +22,7 @@ List<GetPage<dynamic>>? routes = [
   //? On Boarding :
   GetPage(name: AppRoutes.onBoadrding, page: () => const OnBoardingScreen()),
   //? Pages :
+  GetPage(name: AppRoutes.mainScreen, page: () => const MainScreen()),
   GetPage(name: AppRoutes.homeScreen, page: () => const HomeScreen()),
   GetPage(name: AppRoutes.conditionerPage, page: () => const ConditionerPage()),
   GetPage(name: AppRoutes.singleRoom, page: () => const SingleRoom()),

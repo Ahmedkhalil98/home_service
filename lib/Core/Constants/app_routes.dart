@@ -4,6 +4,7 @@ class AppRoutes {
   static const String loginScreen = '/login';
   static const String signUpScreen = '/signUp';
   //? Home Pages Routes :
+  static const String mainScreen = '/mainScreen';
   static const String homeScreen = '/homeScreen';
   static const String singleRoom = '/singleRoom';
   static const String waterPage = '/WaterPage';
