@@ -11,7 +11,7 @@ class GeneratorElectricityPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(),
+      appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
           const TitleOfPage(

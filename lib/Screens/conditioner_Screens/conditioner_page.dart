@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Core/Constants/app_routes.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
+import 'package:home_service/Core/Constants/image_link.dart';
 import 'package:home_service/General_Widgets/App_Bar_widget.dart';
 import 'package:home_service/General_Widgets/Title_of_Page.dart';
 
@@ -12,11 +13,11 @@ class ConditionerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(),
+      appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
           const TitleOfPage(
-              title: "Conditioner", imageUrl: "assets/conditioner_black.png"),
+              title: "Conditioner", imageUrl: AppImageAssets.conditioner),
           SizedBox(
             height: 400.h,
             child: ListView.builder(

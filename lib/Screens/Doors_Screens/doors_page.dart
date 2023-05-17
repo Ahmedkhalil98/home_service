@@ -26,7 +26,7 @@ class _DoorsPageState extends State<DoorsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(),
+      appBar: const AppBarWidget(isHomePage: false),
       body: SingleChildScrollView(
         child: Column(
           children: [
