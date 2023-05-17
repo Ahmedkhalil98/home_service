@@ -14,23 +14,25 @@ class OnBoardingScreen extends StatelessWidget {
     Get.put(OnBoardingControllerImp());
     return Scaffold(
       backgroundColor: white,
-      body: SafeArea(
-          child: Column(
-        children: [
-           const Expanded(
-            flex: 3,
-            child: CustomSlider(),
-          ),
-          Expanded(
-              child: Column(
-            children: const [
-              CustomDotList(),
-              Spacer(flex: 2),
-              CustomOnBoardingButton()
-            ],
-          ))
-        ],
-      )),
+      body: const SingleChildScrollView(
+        child:  SafeArea(
+            child: Column(
+          children: [
+            Expanded(
+              flex: 3,
+              child: CustomSlider(),
+            ),
+            Expanded(
+                child: Column(
+              children: [
+                CustomDotList(),
+                Spacer(flex: 2),
+                CustomOnBoardingButton()
+              ],
+            ))
+          ],
+        )),
+      ),
     );
   }
 }

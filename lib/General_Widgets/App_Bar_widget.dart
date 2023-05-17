@@ -10,8 +10,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      centerTitle: true,
       backgroundColor: primaryColor,
+      centerTitle: true,
       toolbarHeight: 60.h,
       elevation: 0,
       title: Container(
@@ -44,6 +44,46 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           ),
         )
       ],
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            height: 40.h,
+            width: 280.w,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(
+                color: Colors.grey,
+              ),
+              borderRadius: BorderRadius.circular(10.r),
+            ),
+            child: TextFormField(
+              decoration: InputDecoration(
+                prefixIcon: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.search,
+                      color: primaryColor,
+                    )),
+                contentPadding: const EdgeInsets.only(top: 5, left: 10),
+                hintText: "Search ...",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.r),
+                    borderSide: const BorderSide(color: Colors.grey)),
+              ),
+            ),
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.mic,
+                size: 35.w,
+              ))
+        ],
+      ),
     );
   }
 }

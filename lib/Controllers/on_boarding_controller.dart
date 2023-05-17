@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Core/Constants/app_routes.dart';
 import 'package:home_service/Core/Services/services.dart';
-import 'package:home_service/Data/statics.dart';
+import 'package:home_service/Data/Static/statics.dart';
 
 abstract class OnBoardingController extends GetxController {
   next();

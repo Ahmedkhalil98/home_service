@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Controllers/on_boarding_controller.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
-import 'package:home_service/Data/statics.dart';
+import 'package:home_service/Data/Static/statics.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomSlider extends GetView<OnBoardingControllerImp> {

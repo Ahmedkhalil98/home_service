@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:home_service/Controllers/on_boarding_controller.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
-import 'package:home_service/Data/statics.dart';
+import 'package:home_service/Data/Static/statics.dart';
 
 class CustomDotList extends StatelessWidget {
   const CustomDotList({
