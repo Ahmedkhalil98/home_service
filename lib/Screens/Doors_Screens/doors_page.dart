@@ -5,20 +5,19 @@ import 'package:home_service/General_Widgets/App_Bar_widget.dart';
 import 'package:home_service/General_Widgets/Title_of_Page.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
-class PlugsPage extends StatefulWidget {
-  const PlugsPage({super.key});
+class DoorsPage extends StatefulWidget {
+  const DoorsPage({super.key});
 
   @override
-  State<PlugsPage> createState() => _PlugsPageState();
+  State<DoorsPage> createState() => _DoorsPageState();
 }
 
-class _PlugsPageState extends State<PlugsPage> {
+class _DoorsPageState extends State<DoorsPage> {
   List temp = [
-    "garden",
+    "Main Door",
     "Hall",
     "Bed Room 1",
     "Bed Room 2",
-    "Bed Room 3",
     "Kitchen",
     "bathroom",
   ];
@@ -32,8 +31,8 @@ class _PlugsPageState extends State<PlugsPage> {
         child: Column(
           children: [
             const TitleOfPage(
-              title: "Plugs",
-              imageUrl: "assets/plug.png",
+              title: "Doors",
+              imageUrl: "assets/door.png",
             ),
             SizedBox(
               height: 500.h,
@@ -52,6 +51,14 @@ class _PlugsPageState extends State<PlugsPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 18.w),
+                          child: Icon(
+                            Icons.door_back_door,
+                            size: 30.h,
+                            color: white,
+                          ),
+                        ),
                         Container(
                           margin: EdgeInsets.only(left: 20.w),
                           child: Text(
@@ -65,7 +72,9 @@ class _PlugsPageState extends State<PlugsPage> {
                         Container(
                             margin: EdgeInsets.only(right: 20.w),
                             child: FlutterSwitch(
-                              width: 80.w,
+                              activeText: "OPen",
+                              inactiveText: "Close",
+                              width: 90.w,
                               height: 30.h,
                               valueFontSize: 12.sp,
                               toggleSize: 45,

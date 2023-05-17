@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_service/Core/Constants/app_themes.dart';
 import 'package:home_service/General_Widgets/App_Bar_widget.dart';
 import 'package:home_service/General_Widgets/Title_of_Page.dart';
 import 'package:home_service/Screens/electricity_screens/widgets/DataSection_widget.dart';
@@ -15,28 +16,19 @@ class GeneratorElectricityPage extends StatelessWidget {
         children: [
           const TitleOfPage(
             title: "Generator Electricity",
-            imageUrl: "assets/tower.png",
+            imageUrl: "assets/generatorBlack.png",
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
             height: 200.h,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.grey[300],
-              border: Border.all(
-                width: 0.2,
-              ),
+              color: white,
+              border: Border.all(width: 1.w, color: primaryColor),
               borderRadius: BorderRadius.circular(10.r),
             ),
-            child: Column(
-              children: [
-                SizedBox(
-                    height: 100.h,
-                    width: 100.w,
-                    child: Image.asset(
-                      "assets/tower.png",
-                    )),
-              ],
+            child: const Column(
+              children: [],
             ),
           ),
           //! ----
@@ -45,10 +37,7 @@ class GeneratorElectricityPage extends StatelessWidget {
             height: 150.h,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.grey[300],
-              border: Border.all(
-                width: 0.2,
-              ),
+              color: primaryColor,
               borderRadius: BorderRadius.circular(10.r),
             ),
             child: Column(

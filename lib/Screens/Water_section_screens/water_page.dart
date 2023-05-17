@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_service/Core/Constants/app_themes.dart';
 import 'package:home_service/General_Widgets/App_Bar_widget.dart';
 import 'package:home_service/General_Widgets/Title_of_Page.dart';
 
@@ -12,15 +13,19 @@ class WaterPage extends StatelessWidget {
       appBar: const AppBarWidget(),
       body: Column(
         children: [
-          const TitleOfPage(title: "Water", imageUrl: "assets/water.png"),
+          const TitleOfPage(
+            title: "Water",
+            imageUrl: "assets/water-tank.png",
+          ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
             height: 250.h,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.grey[300],
+              color: white,
               border: Border.all(
-                width: 0.2,
+                width: 1.w,
+                color: primaryColor,
               ),
               borderRadius: BorderRadius.circular(10.r),
             ),
@@ -38,12 +43,13 @@ class WaterPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
+                      color: Colors.red,
                     ),
                   ),
                   SizedBox(
                     height: 150.h,
                     width: 150.w,
-                    child: const Placeholder(),
+                    child: Image.asset("assets/water-level.png"),
                   )
                 ]),
           )
@@ -55,9 +61,10 @@ class WaterPage extends StatelessWidget {
             height: 100.h,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.grey[300],
+              color: white,
               border: Border.all(
-                width: 0.2,
+                width: 1.w,
+                color: primaryColor,
               ),
               borderRadius: BorderRadius.circular(10.r),
             ),
@@ -77,19 +84,26 @@ class WaterPage extends StatelessWidget {
                         padding: EdgeInsets.symmetric(
                             horizontal: 20.w, vertical: 10.h),
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: Colors.lightBlue.withOpacity(0.3),
                           borderRadius: BorderRadius.circular(10.r),
                         ),
-                        child: const Text("Auto"),
+                        child: const Text(
+                          "Auto",
+                          style: TextStyle(
+                              //color: white,
+                              ),
+                        ),
                       ),
                       Container(
                         padding: EdgeInsets.symmetric(
                             horizontal: 20.w, vertical: 10.h),
                         decoration: BoxDecoration(
-                          color: Colors.green,
+                          color: Colors.green.withOpacity(0.3),
                           borderRadius: BorderRadius.circular(10.r),
                         ),
-                        child: const Text("ON"),
+                        child: const Text(
+                          "ON",
+                        ),
                       ),
                       Container(
                         padding: EdgeInsets.symmetric(
@@ -98,7 +112,12 @@ class WaterPage extends StatelessWidget {
                           color: Colors.red,
                           borderRadius: BorderRadius.circular(10.r),
                         ),
-                        child: const Text("OFF"),
+                        child: Text(
+                          "OFF",
+                          style: TextStyle(
+                            color: white,
+                          ),
+                        ),
                       ),
                     ],
                   )

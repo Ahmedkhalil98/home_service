@@ -17,7 +17,7 @@ class TitleOfPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 12.h),
-      height: 110.h,
+      height: 120.h,
       decoration: BoxDecoration(
         color: white,
         border: Border.all(
@@ -31,7 +31,7 @@ class TitleOfPage extends StatelessWidget {
         children: [
           SizedBox(
               height: 100.h,
-              width: 100.w,
+              width: 90.w,
               child: Image.asset(
                 imageUrl,
               )),

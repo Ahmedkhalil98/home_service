@@ -14,15 +14,6 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       toolbarHeight: 60.h,
       elevation: 0,
-      actions: [
-        Padding(
-          padding: EdgeInsets.only(right: 8.w, left: 4.w),
-          child: Icon(
-            Icons.mic,
-            size: 35.w,
-          ),
-        )
-      ],
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
