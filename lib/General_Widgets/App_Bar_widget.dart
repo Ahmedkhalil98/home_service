@@ -14,27 +14,6 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       toolbarHeight: 60.h,
       elevation: 0,
-      title: Container(
-        margin: EdgeInsets.symmetric(vertical: 50.h),
-        decoration: BoxDecoration(
-          color: white,
-          borderRadius: BorderRadius.circular(20.r),
-        ),
-        child: TextFormField(
-          decoration: InputDecoration(
-              hintText: "Search",
-              prefixIcon: const Icon(Icons.search),
-              border: OutlineInputBorder(
-                  borderSide: BorderSide(color: white, width: 2),
-                  borderRadius: const BorderRadius.all(Radius.circular(20))),
-              focusedBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.orange, width: 2),
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
-              enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: white, width: 2),
-                  borderRadius: const BorderRadius.all(Radius.circular(20)))),
-        ),
-      ),
       actions: [
         Padding(
           padding: EdgeInsets.only(right: 8.w, left: 4.w),
