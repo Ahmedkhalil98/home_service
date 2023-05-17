@@ -13,10 +13,10 @@ class SingleRoom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const AppBarWidget(),
+    return const Scaffold(
+      appBar: AppBarWidget(),
       body: Column(
-        children: const [
+        children: [
           TitleOfPage(
               title: "Room 1", imageUrl: "assets/conditioner_green.png"),
           PowerWidget(),

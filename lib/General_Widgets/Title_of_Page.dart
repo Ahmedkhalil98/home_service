@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_service/Core/Constants/app_themes.dart';
 
 class TitleOfPage extends StatelessWidget {
   final String title;
@@ -18,9 +19,10 @@ class TitleOfPage extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 12.h),
       height: 110.h,
       decoration: BoxDecoration(
-        color: Colors.blue[200],
+        color: white,
         border: Border.all(
-          width: 0.4,
+          width: 1.w,
+          color: primaryColor,
         ),
         borderRadius: BorderRadius.circular(10.r),
       ),
@@ -35,10 +37,10 @@ class TitleOfPage extends StatelessWidget {
               )),
           Text(
             title,
-            style: TextStyle(
-              fontSize: 22.sp,
-              fontWeight: FontWeight.bold,
-            ),
+            style: titleStyle.copyWith(
+                color: primaryColor,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.sp),
           ),
         ],
       ),

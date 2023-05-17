@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Core/Services/services.dart';
-import 'package:home_service/root.dart';
+import 'package:home_service/Screens/electricity_screens/electricity_page.dart';
+import 'package:home_service/Screens/electricity_screens/tower_electricity_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +24,9 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          getPages: routes,
+
+          home: const TowerElectricityPage(),
+          //getPages: routes,
         );
       },
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:home_service/Core/Constants/app_routes.dart';
+import 'package:home_service/Core/Constants/app_themes.dart';
 import 'package:home_service/General_Widgets/App_Bar_widget.dart';
 import 'package:home_service/General_Widgets/Title_of_Page.dart';
 
@@ -23,17 +25,15 @@ class ConditionerPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
-                    Get.toNamed("singleRoom");
+                    //! go to the single Room
+                    Get.toNamed(AppRoutes.singleRoom);
                   },
                   child: Container(
                     margin:
                         EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
                     height: 64.h,
                     decoration: BoxDecoration(
-                      color: Colors.grey[300],
-                      border: Border.all(
-                        width: 0.2,
-                      ),
+                      color: primaryColor,
                       borderRadius: BorderRadius.circular(10.r),
                     ),
                     child: Row(
@@ -41,14 +41,16 @@ class ConditionerPage extends StatelessWidget {
                       children: [
                         Image.asset("assets/conditioner_red.png"),
                         Text(
-                          "Room ${index + 1}",
+                          "Bad Room ${index + 1}",
                           style: TextStyle(
-                            fontSize: 18.sp,
+                            fontSize: 16.sp,
+                            color: white,
                           ),
                         ),
-                        const Icon(
+                        Icon(
                           Icons.arrow_forward_ios,
-                          color: Colors.grey,
+                          color: white,
+                          size: 25.h,
                         ),
                       ],
                     ),

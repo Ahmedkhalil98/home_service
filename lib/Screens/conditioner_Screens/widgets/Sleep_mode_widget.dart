@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_service/Core/Constants/app_themes.dart';
 
 class SleepModeWidget extends StatelessWidget {
   const SleepModeWidget({super.key});
@@ -11,10 +12,8 @@ class SleepModeWidget extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
       height: 50.h,
       decoration: BoxDecoration(
-        color: Colors.grey[300],
-        border: Border.all(
-          width: 0.2,
-        ),
+        color: white,
+        border: Border.all(width: 1.w, color: primaryColor),
         borderRadius: BorderRadius.circular(10.r),
       ),
       child: Row(
@@ -33,7 +32,7 @@ class SleepModeWidget extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
             decoration: BoxDecoration(
-              color: Colors.green,
+              color: Colors.green[50],
               borderRadius: BorderRadius.circular(10.r),
             ),
             child: const Text("ON"),
@@ -41,10 +40,15 @@ class SleepModeWidget extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
             decoration: BoxDecoration(
-              color: Colors.red[100],
+              color: Colors.red,
               borderRadius: BorderRadius.circular(10.r),
             ),
-            child: const Text("OFF"),
+            child: Text(
+              "OFF",
+              style: TextStyle(
+                color: white,
+              ),
+            ),
           ),
         ],
       ),

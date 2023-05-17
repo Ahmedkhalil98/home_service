@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_service/Core/Constants/app_themes.dart';
 
 class TimerWidget extends StatelessWidget {
   const TimerWidget({super.key});
@@ -11,10 +12,8 @@ class TimerWidget extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
       height: 100.h,
       decoration: BoxDecoration(
-        color: Colors.grey[300],
-        border: Border.all(
-          width: 0.2,
-        ),
+        color: white,
+        border: Border.all(width: 1.w, color: primaryColor),
         borderRadius: BorderRadius.circular(10.r),
       ),
       child: Column(
@@ -39,12 +38,17 @@ class TimerWidget extends StatelessWidget {
                   color: Colors.green,
                   borderRadius: BorderRadius.circular(10.r),
                 ),
-                child: const Text("ON"),
+                child: Text(
+                  "ON",
+                  style: TextStyle(
+                    color: white,
+                  ),
+                ),
               ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
                 decoration: BoxDecoration(
-                  color: Colors.red[100],
+                  color: Colors.red[50],
                   borderRadius: BorderRadius.circular(10.r),
                 ),
                 child: const Text("OFF"),
@@ -62,8 +66,11 @@ class TimerWidget extends StatelessWidget {
               ),
               Container(
                 height: 40.h,
-                width: 100.w,
+                width: 160.w,
                 decoration: BoxDecoration(
+                    border: Border.all(
+                      color: primaryColor,
+                    ),
                     borderRadius: BorderRadius.circular(10.r),
                     color: Colors.white),
               )

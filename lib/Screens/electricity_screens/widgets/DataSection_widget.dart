@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_service/Core/Constants/app_themes.dart';
 
 class DataSectionwidget extends StatelessWidget {
   String title;
@@ -21,20 +22,15 @@ class DataSectionwidget extends StatelessWidget {
           title,
           style: TextStyle(
             fontSize: 16.sp,
+            color: white,
           ),
         ),
         Container(
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10.r),
-            ),
             child: Text(
               value,
               style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.bold,
-              ),
+                  fontSize: 16.sp, fontWeight: FontWeight.bold, color: white),
             )),
       ],
     );

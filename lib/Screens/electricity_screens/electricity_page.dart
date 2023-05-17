@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_service/Core/Constants/app_themes.dart';
 import 'package:home_service/General_Widgets/App_Bar_widget.dart';
 import 'package:home_service/General_Widgets/Title_of_Page.dart';
 
@@ -37,29 +38,28 @@ class ElectricityPage extends StatelessWidget {
                   margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
                   height: 80.h,
                   decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    border: Border.all(
-                      width: 0.2,
-                    ),
+                    color: primaryColor,
                     borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                          height: 100.h,
-                          width: 100.w,
+                          height: 80.h,
+                          width: 70.w,
                           margin: EdgeInsets.all(4.w),
                           child: Image.asset(imgUrltemp[index])),
                       Text(
                         titleTemp[index],
                         style: TextStyle(
                           fontSize: 18.sp,
+                          color: white,
                         ),
                       ),
-                      const Icon(
+                      Icon(
                         Icons.arrow_forward_ios,
-                        color: Colors.grey,
+                        color: white,
+                        size: 25.w,
                       ),
                     ],
                   ),
