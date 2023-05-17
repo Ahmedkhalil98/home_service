@@ -40,7 +40,7 @@ class MainTVPage extends StatelessWidget {
                       children: [
                         Image.asset("assets/television_red.png"),
                         Text(
-                          "Bad Room ${index + 1}",
+                          "Room ${index + 1}",
                           style: TextStyle(
                             fontSize: 16.sp,
                             color: white,
