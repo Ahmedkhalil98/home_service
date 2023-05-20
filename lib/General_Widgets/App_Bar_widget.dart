@@ -3,9 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
+  final bool isHomePage;
   @override
   Size get preferredSize => Size.fromHeight(60.h);
-  const AppBarWidget({super.key});
+  const AppBarWidget({super.key, required this.isHomePage});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         children: [
           Container(
             height: 40.h,
-            width: 280.w,
+            width: isHomePage == true ? 280.w : 220.w,
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(

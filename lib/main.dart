@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Core/Services/services.dart';
-import 'package:home_service/Screens/Tv_Screens/single_tv_page.dart';
+import 'package:home_service/Screens/Main_Screen/main_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
 
-          home: const SingleTVPage(),
-          //getPages: routes,
+          home: const MainScreen(),
+          // getPages: routes,
         );
       },
     );

@@ -15,7 +15,7 @@ class WashingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(WashongController());
     return Scaffold(
-      appBar: const AppBarWidget(),
+      appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
           const TitleOfPage(

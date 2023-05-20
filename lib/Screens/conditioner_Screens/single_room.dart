@@ -14,7 +14,7 @@ class SingleRoom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: AppBarWidget(),
+      appBar: AppBarWidget(isHomePage: false),
       body: Column(
         children: [
           TitleOfPage(

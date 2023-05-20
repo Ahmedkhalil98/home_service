@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:home_service/Core/Constants/app_routes.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
-import 'package:home_service/General_Widgets/App_Bar_widget.dart';
+import 'package:home_service/Core/Constants/image_link.dart';
 import 'package:home_service/General_Widgets/Title_of_Page.dart';
 
-class MainTVPage extends StatelessWidget {
-  const MainTVPage({super.key});
+import '../../General_Widgets/App_Bar_widget.dart';
+
+class LampScreen extends StatelessWidget {
+  const LampScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +17,7 @@ class MainTVPage extends StatelessWidget {
       appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
-          const TitleOfPage(
-            title: "Television (TV)",
-            imageUrl: "assets/television.png",
-          ),
+          const TitleOfPage(title: "Lamp", imageUrl: AppImageAssets.lamp),
           SizedBox(
             height: 400.h,
             child: ListView.builder(
@@ -25,7 +26,8 @@ class MainTVPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
-                    //! go to single TV
+                    //! go to the single Room
+                    Get.toNamed(AppRoutes.lampSingleRoomPage);
                   },
                   child: Container(
                     margin:
@@ -38,7 +40,7 @@ class MainTVPage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Image.asset("assets/television_red.png"),
+                        Image.asset(AppImageAssets.lamp),
                         Text(
                           "Room ${index + 1}",
                           style: TextStyle(

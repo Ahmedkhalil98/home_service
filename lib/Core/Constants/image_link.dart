@@ -3,7 +3,13 @@ class AppImageAssets {
   static const String onBoardingTwo = 'assets/onboarding/three.jpg';
   static const String onBoardingThree = 'assets/onboarding/three.jpg';
   //? Home Device Image :
-  static const String conditioner = 'assets/home_device/conditioner.png';
+  static const String conditioner = 'assets/conditioner_black.png';
   static const String lamp = 'assets/home_device/lamp.png';
-  static const String electricity = 'assets/home_device/electricit.png';
+  static const String washing = 'assets/washing-machine.png';
+  static const String tv = 'assets/television.png';
+  static const String door = 'assets/door.png';
+  static const String water = 'assets/water-tank.png';
+  static const String electricity = 'assets/electricity.png';
+
+   
 }
