@@ -4,13 +4,13 @@ import 'package:home_service/Data/Models/device_cat_model.dart';
 
 import '../../Core/Constants/image_link.dart';
 
-List<DeviceCatModel> deviceName = [
+List<DeviceCatModel> homeDeviceData = [
   DeviceCatModel(
       title: 'Conditioner',
       image: AppImageAssets.conditioner,
       onTap: () => Get.toNamed(AppRoutes.conditionerPage)),
   DeviceCatModel(
-      title: 'Lamp', image: AppImageAssets.lamp, onTap: () => Get.toNamed('')),
+      title: 'Lamp', image: AppImageAssets.lamp, onTap: () => Get.toNamed(AppRoutes.lampPage)),
   DeviceCatModel(
       title: 'Washing',
       image: AppImageAssets.washing,

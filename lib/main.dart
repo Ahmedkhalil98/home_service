@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Core/Services/services.dart';
-import 'package:home_service/Screens/Main_Screen/main_screen.dart';
-import 'package:home_service/Screens/Tv_Screens/main_page.dart';
-import 'package:home_service/Screens/lamp_screens/components/lamp_single_room.dart';
-import 'package:home_service/Screens/lamp_screens/lamp_screen.dart';
+import 'package:home_service/Screens/settings/settings_screen.dart';
 import 'package:home_service/root.dart';
 
 void main() async {
@@ -28,8 +25,8 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
 
-          home: const MainScreen(),
-         // getPages: routes,
+          //home: const SettingScreen(),
+          getPages: routes,
         );
       },
     );

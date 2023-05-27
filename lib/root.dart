@@ -12,6 +12,8 @@ import 'package:home_service/Screens/conditioner_Screens/conditioner_page.dart';
 import 'package:home_service/Screens/conditioner_Screens/single_room.dart';
 import 'package:home_service/Screens/electricity_screens/electricity_page.dart';
 import 'package:home_service/Screens/lamp_screens/components/lamp_single_room.dart';
+import 'package:home_service/Screens/lamp_screens/lamp_screen.dart';
+import 'package:home_service/Screens/settings/settings_screen.dart';
 import 'package:home_service/Screens/washing_Screens/washing_page.dart';
 
 import 'Screens/OnBoarding_Screens/on_boarding_Screen.dart';
@@ -29,6 +31,7 @@ List<GetPage<dynamic>>? routes = [
   //? Main Pages :
   GetPage(name: AppRoutes.mainScreen, page: () => const MainScreen()),
   GetPage(name: AppRoutes.homeScreen, page: () => const HomeScreen()),
+  GetPage(name: AppRoutes.settingScreen, page: () => const SettingScreen()),
   //? Home Cat. Items Pages :
   GetPage(name: AppRoutes.conditionerPage, page: () => const ConditionerPage()),
   GetPage(name: AppRoutes.electricityPage, page: () =>  ElectricityPage()),
@@ -38,4 +41,5 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoutes.washingPage, page: () => const WashingPage(),),
   GetPage(name: AppRoutes.doorPage, page: () => const DoorsPage(),),
   GetPage(name: AppRoutes.lampSingleRoomPage, page: () => const LampSingleRoom(),),
+  GetPage(name: AppRoutes.lampPage, page: () => const LampScreen(),),
 ];

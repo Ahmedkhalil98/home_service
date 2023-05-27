@@ -33,6 +33,7 @@ class TitleOfPage extends StatelessWidget {
               height: 100.h,
               width: 90.w,
               child: Image.asset(
+                color: Colors.black,
                 imageUrl,
               )),
           Text(

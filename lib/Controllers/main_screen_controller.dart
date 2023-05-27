@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Screens/Home_Screen/home_page.dart';
+import 'package:home_service/Screens/settings/settings_screen.dart';
 
 abstract class MainScreenController extends GetxController {
   changePage(int currentPage);
@@ -12,7 +13,7 @@ class MainScreenControllerImp extends MainScreenController {
     HomeScreen(),
     Center(child: Text("Notifi")),
     Center(child: Text("Profile")),
-    Center(child: Text("Settings")),
+    SettingScreen()
   ];
   List<String> pageTitle = [
     'Home',

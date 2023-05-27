@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
-import 'package:home_service/Data/Static/device_name.dart';
+import 'package:home_service/Data/Static/home_device_data.dart';
 
 class CustomHomeCatagories extends StatelessWidget {
   final void Function()? onTap;
@@ -21,10 +21,10 @@ class CustomHomeCatagories extends StatelessWidget {
               crossAxisSpacing: 10.w,
               mainAxisSpacing: 10.h,
             ),
-            itemCount: deviceName.length,
+            itemCount: homeDeviceData.length,
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: deviceName[index].onTap,
+                onTap: homeDeviceData[index].onTap,
                 child: Card(
                   shape: RoundedRectangleBorder(
                     side: const BorderSide(color: primaryColor, width: 1),
@@ -37,7 +37,8 @@ class CustomHomeCatagories extends StatelessWidget {
                       children: [
                         //! Add Images Later ;
                         Image.asset(
-                          deviceName[index].image!,
+                          color: Colors.black,
+                          homeDeviceData[index].image!,
                           width: 80.w,
                         ),
                         Container(
@@ -51,7 +52,7 @@ class CustomHomeCatagories extends StatelessWidget {
                               ),
                               color: primaryColor.withOpacity(.5)),
                           child: Text(
-                            deviceName[index].title!,
+                            homeDeviceData[index].title!,
                             style: titleStyle,
                           ),
                         )

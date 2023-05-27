@@ -6,6 +6,7 @@ class AppRoutes {
   //? Home Pages Routes :
   static const String mainScreen = '/mainScreen';
   static const String homeScreen = '/homeScreen';
+  static const String settingScreen = '/settingScreen';
   static const String singleRoom = '/singleRoom';
   //? Home Cat. Pages
   static const String waterPage = '/waterPage';
@@ -14,6 +15,7 @@ class AppRoutes {
   static const String tvPage = '/tvPage';
   static const String washingPage = '/washingPage';
   static const String doorPage = '/doorPage';
+  static const String lampPage = '/lampPage';
   static const String lampSingleRoomPage = '/lampSingleRoomPage';
 
 
