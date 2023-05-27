@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Core/Services/services.dart';
-import 'package:home_service/Screens/settings/settings_screen.dart';
-import 'package:home_service/root.dart';
+import 'package:home_service/Screens/Main_Screen/main_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,8 +24,8 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
 
-          //home: const SettingScreen(),
-          getPages: routes,
+          home: const MainScreen(),
+         // getPages: routes,
         );
       },
     );
