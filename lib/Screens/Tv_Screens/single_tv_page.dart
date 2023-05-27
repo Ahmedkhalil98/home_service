@@ -19,7 +19,7 @@ class _SingleTVPageState extends State<SingleTVPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(),
+      appBar:  const AppBarWidget(isHomePage: false,),
       body: Column(
         children: [
           const TitleOfPage(
