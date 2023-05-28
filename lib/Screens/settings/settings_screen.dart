@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
 import 'package:home_service/Core/Constants/image_link.dart';
@@ -15,9 +16,9 @@ class SettingScreen extends StatelessWidget {
               clipBehavior: Clip.none,
               alignment: Alignment.center,
               children: [
-                Container(height: Get.height / 5.5, color: primaryColor),
+                Container(height: Get.height / 5.1.h, color: primaryColor),
                 Positioned(
-                    top: Get.height / 8,
+                    top: Get.height / 8.h,
                     child: Container(
                       padding: const EdgeInsets.all(4),
                       decoration: BoxDecoration(
@@ -25,14 +26,14 @@ class SettingScreen extends StatelessWidget {
                           border: Border.all(color: primaryColor),
                           borderRadius: BorderRadius.circular(100)),
                       child: CircleAvatar(
-                        radius: 40,
+                        radius: 40.r,
                         backgroundColor: Colors.grey[100],
                         backgroundImage:
                             const AssetImage(AppImageAssets.avatar),
                       ),
                     )),
               ]),
-          const SizedBox(height: 75),
+          SizedBox(height: 65.h),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Card(
@@ -114,7 +115,7 @@ class CustomSettingTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: titleStyle.copyWith(fontSize: 16),
+        style: titleStyle.copyWith(fontSize: 16.sp),
       ),
     );
   }

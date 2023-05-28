@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
+import 'package:home_service/Core/Constants/image_link.dart';
 import 'package:home_service/General_Widgets/App_Bar_widget.dart';
 
 import '../../General_Widgets/Title_of_Page.dart';
@@ -24,7 +25,7 @@ class _SingleTVPageState extends State<SingleTVPage> {
         children: [
           const TitleOfPage(
             title: "Living Room",
-            imageUrl: "assets/television.png",
+            imageUrl: AppImageAssets.tv,
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),

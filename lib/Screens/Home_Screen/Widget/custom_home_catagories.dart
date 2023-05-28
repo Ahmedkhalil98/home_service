@@ -4,11 +4,7 @@ import 'package:home_service/Core/Constants/app_themes.dart';
 import 'package:home_service/Data/Static/home_device_data.dart';
 
 class CustomHomeCatagories extends StatelessWidget {
-  final void Function()? onTap;
-  const CustomHomeCatagories({
-    super.key,
-    required this.onTap,
-  });
+  const CustomHomeCatagories({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +33,7 @@ class CustomHomeCatagories extends StatelessWidget {
                       children: [
                         //! Add Images Later ;
                         Image.asset(
-                          color: Colors.black,
+                          color: black,
                           homeDeviceData[index].image!,
                           width: 80.w,
                         ),

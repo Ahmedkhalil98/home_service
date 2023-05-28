@@ -7,7 +7,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: const AppBarWidget(isHomePage: true), body: CustomHomeCatagories(onTap: (){},));
+    return const Scaffold(
+        appBar: AppBarWidget(isHomePage: true), body: CustomHomeCatagories());
   }
 }
-
