@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
 
 class TitleOfPage extends StatelessWidget {
   final String title;
   final String imageUrl;
+  final int totalDevice;
+  final int onDevice;
+  final bool isSingleRoom;
 
   const TitleOfPage({
     super.key,
+    required this.isSingleRoom,
     required this.title,
     required this.imageUrl,
+    required this.totalDevice,
+    required this.onDevice,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 12.h),
-      height: 120.h,
+      height: 100.h,
       decoration: BoxDecoration(
         color: white,
         border: Border.all(
@@ -27,21 +34,34 @@ class TitleOfPage extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.r),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          SizedBox(
-              height: 100.h,
-              width: 90.w,
-              child: Image.asset(
-                color: Colors.black,
-                imageUrl,
-              )),
-          Text(
-            title,
-            style: titleStyle.copyWith(
-                color: primaryColor,
-                fontWeight: FontWeight.bold,
-                fontSize: 20.sp),
+          Expanded(child: SvgPicture.asset(height: 80, imageUrl)),
+          Expanded(
+            flex: 2,
+            child: Column(
+              mainAxisAlignment: isSingleRoom
+                  ? MainAxisAlignment.center
+                  : MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  title,
+                  style: titleStyle.copyWith(
+                      color: primaryColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.sp),
+                ),
+                isSingleRoom
+                    ? Container()
+                    : Text(
+                        '$onDevice / $totalDevice',
+                        style: titleStyle.copyWith(
+                            color: primaryColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20.sp),
+                      ),
+              ],
+            ),
           ),
         ],
       ),

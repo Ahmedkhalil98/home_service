@@ -18,7 +18,8 @@ class WashingPage extends StatelessWidget {
       appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
-          const TitleOfPage(
+          const TitleOfPage(totalDevice: 10,isSingleRoom: true,
+            onDevice: 5,
             title: "Washing",
             imageUrl: "assets/washing-machine.png",
           ),

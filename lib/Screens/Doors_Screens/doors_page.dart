@@ -30,7 +30,9 @@ class _DoorsPageState extends State<DoorsPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const TitleOfPage(
+            const TitleOfPage(totalDevice: 10,
+            isSingleRoom: true,
+            onDevice: 5,
               title: "Doors",
               imageUrl: "assets/door.png",
             ),

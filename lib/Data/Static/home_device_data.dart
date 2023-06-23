@@ -10,13 +10,16 @@ List<DeviceCatModel> homeDeviceData = [
       image: AppImageAssets.conditioner,
       onTap: () => Get.toNamed(AppRoutes.conditionerPage)),
   DeviceCatModel(
-      title: 'Lamp', image: AppImageAssets.lamp, onTap: () => Get.toNamed(AppRoutes.lampPage)),
+      title: 'Lamp',
+      image: AppImageAssets.lamp,
+      onTap: () => Get.toNamed(AppRoutes.lampPage)),
   DeviceCatModel(
       title: 'Washing',
       image: AppImageAssets.washing,
       onTap: () => Get.toNamed(AppRoutes.washingPage)),
   DeviceCatModel(
-      title: 'Doors', image: AppImageAssets.door, 
+      title: 'Doors',
+      image: AppImageAssets.door,
       onTap: () => Get.toNamed(AppRoutes.doorPage)),
   DeviceCatModel(
       title: 'Electricity',
@@ -24,22 +27,24 @@ List<DeviceCatModel> homeDeviceData = [
       onTap: () => Get.toNamed(AppRoutes.electricityPage)),
   DeviceCatModel(
       title: 'Cameras',
-      image: AppImageAssets.lamp,
+      image: AppImageAssets.cameras,
       onTap: () => Get.toNamed('')),
   DeviceCatModel(
       title: 'Water',
       image: AppImageAssets.water,
       onTap: () => Get.toNamed(AppRoutes.waterPage)),
   DeviceCatModel(
-      title: 'TV', image: AppImageAssets.tv, onTap: () => Get.toNamed(AppRoutes.tvPage)),
+      title: 'TV',
+      image: AppImageAssets.tv,
+      onTap: () => Get.toNamed(AppRoutes.tvPage)),
   DeviceCatModel(
       title: 'Security',
-      image: AppImageAssets.lamp,
+      image: AppImageAssets.security,
       //!
       onTap: () => Get.toNamed('')),
   DeviceCatModel(
       title: 'Baby Room',
-      image: AppImageAssets.lamp,
+      image: AppImageAssets.baby,
       //!
       onTap: () => Get.toNamed('')),
 ];

@@ -35,11 +35,12 @@ List<GetPage<dynamic>>? routes = [
   //? Home Cat. Items Pages :
   GetPage(name: AppRoutes.conditionerPage, page: () => const ConditionerPage()),
   GetPage(name: AppRoutes.electricityPage, page: () =>  ElectricityPage()),
-  GetPage(name: AppRoutes.singleRoom, page: () => const SingleRoom()),
   GetPage(name: AppRoutes.waterPage, page: () => const WaterPage()),
   GetPage(name: AppRoutes.tvPage, page: () => const MainTVPage(),),
   GetPage(name: AppRoutes.washingPage, page: () => const WashingPage(),),
   GetPage(name: AppRoutes.doorPage, page: () => const DoorsPage(),),
   GetPage(name: AppRoutes.lampSingleRoomPage, page: () => const LampSingleRoom(),),
   GetPage(name: AppRoutes.lampPage, page: () => const LampScreen(),),
+  //? Home Cat. Items:
+  GetPage(name: AppRoutes.singleRoom, page: () => const SingleRoomConditioner(),),
 ];

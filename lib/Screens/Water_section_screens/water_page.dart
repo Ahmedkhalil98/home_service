@@ -13,7 +13,8 @@ class WaterPage extends StatelessWidget {
       appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
-          const TitleOfPage(
+          const TitleOfPage(totalDevice: 10,isSingleRoom: true,
+            onDevice: 5,
             title: "Water",
             imageUrl: "assets/water-tank.png",
           ),

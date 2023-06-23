@@ -15,6 +15,9 @@ class GeneratorElectricityPage extends StatelessWidget {
       body: Column(
         children: [
           const TitleOfPage(
+            isSingleRoom: true,
+            totalDevice: 10,
+            onDevice: 5,
             title: "Generator Electricity",
             imageUrl: "assets/generatorBlack.png",
           ),

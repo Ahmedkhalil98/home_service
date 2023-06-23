@@ -16,7 +16,8 @@ class LampSingleRoom extends StatelessWidget {
       appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
-          const TitleOfPage(title: "Room 1", imageUrl: AppImageAssets.lamp),
+          const TitleOfPage(totalDevice: 10,isSingleRoom: true,
+            onDevice: 5,title: "Room 1", imageUrl: AppImageAssets.lamp),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
             height: 64.h,

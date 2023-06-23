@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
 import 'package:home_service/Data/Static/home_device_data.dart';
 
@@ -12,8 +13,8 @@ class CustomHomeCatagories extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         child: GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              childAspectRatio: .7,
+              crossAxisCount: 2,
+              childAspectRatio: .9,
               crossAxisSpacing: 10.w,
               mainAxisSpacing: 10.h,
             ),
@@ -23,7 +24,7 @@ class CustomHomeCatagories extends StatelessWidget {
                 onTap: homeDeviceData[index].onTap,
                 child: Card(
                   shape: RoundedRectangleBorder(
-                    side: const BorderSide(color: primaryColor, width: 1),
+                    side: const BorderSide(color: primaryColor, width: 2),
                     borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Padding(
@@ -32,21 +33,19 @@ class CustomHomeCatagories extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         //! Add Images Later ;
-                        Image.asset(
-                          color: black,
-                          homeDeviceData[index].image!,
-                          width: 80.w,
-                        ),
+                        SvgPicture.asset(
+                            height: 100, homeDeviceData[index].image!),
                         Container(
                           width: double.maxFinite,
-                          height: 30.h,
+                          height: 40.h,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
+                              border: Border.all(width: 2, color: primaryColor),
                               borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(10),
                                 bottomRight: Radius.circular(10),
                               ),
-                              color: primaryColor.withOpacity(.5)),
+                              color: secColor),
                           child: Text(
                             homeDeviceData[index].title!,
                             style: titleStyle,

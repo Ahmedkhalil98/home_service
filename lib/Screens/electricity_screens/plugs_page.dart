@@ -31,9 +31,10 @@ class _PlugsPageState extends State<PlugsPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const TitleOfPage(
+            const TitleOfPage(totalDevice: 10,
+            onDevice: 5,
               title: "Plugs",
-              imageUrl: "assets/plug.png",
+              imageUrl: "assets/plug.png",isSingleRoom: true,
             ),
             SizedBox(
               height: 500.h,

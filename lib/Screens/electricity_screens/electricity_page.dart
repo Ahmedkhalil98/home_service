@@ -27,6 +27,9 @@ class ElectricityPage extends StatelessWidget {
       body: Column(
         children: [
           const TitleOfPage(
+            isSingleRoom: true,
+            totalDevice: 10,
+            onDevice: 5,
               title: "Electricity", imageUrl: "assets/electricity.png"),
           SizedBox(
             height: 400.h,
