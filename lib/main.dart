@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
 
-          //  home: const SingleRoomConditioner(),
-          getPages: routes,
+          home: const SingleRoomConditioner(),
+          //getPages: routes,
         );
       },
     );

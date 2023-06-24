@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:firebase_database/firebase_database.dart';
+import 'package:home_service/Core/Functions/snackbar_field_check.dart';
 
 class GetCondetionerData extends GetxController {
   late final dbref = FirebaseDatabase.instance.ref();
 
+  //? Validation Variable:
+  int minTemp = 17;
+  int maxTemp = 40;
+  int minFanSpeed = 0;
+  int maxFanSpeed = 5;
   //?Variables:
   int tempreature = 0;
   int fanSpeed = 0;
@@ -49,8 +55,7 @@ class GetCondetionerData extends GetxController {
       } else if (fieldName == 'CONDITIONER/ROOM1/SLEEPMODE') {
         sleepMode = int.parse(event.snapshot.value.toString());
         update();
-      }
-      else if (fieldName == 'CONDITIONER/ROOM1/FANSPEED') {
+      } else if (fieldName == 'CONDITIONER/ROOM1/FANSPEED') {
         fanSpeed = int.parse(event.snapshot.value.toString());
         update();
       }
@@ -68,30 +73,46 @@ class GetCondetionerData extends GetxController {
 
   //! Increment Temp:
   void incTemp() {
-    
-    tempreature++;
-    updateData('TEMP', tempreature.toString());
-    update();
+    if (tempreature > 40 - 1) {
+      showSnackBar();
+    } else {
+      tempreature++;
+      updateData('TEMP', tempreature.toString());
+      update();
+    }
   }
 
   //! Decrement Temp:
   void decTemp() {
-    tempreature--;
-    updateData('TEMP', tempreature.toString());
-    update();
+    if (tempreature < 18 + 1) {
+      showSnackBar();
+    } else {
+      tempreature--;
+      updateData('TEMP', tempreature.toString());
+      update();
+    }
   }
+
   //! Increment Fan Speed:
   void incFanSpeed() {
-    fanSpeed++;
-    updateData('FANSPEED', fanSpeed.toString());
-    update();
+    if (fanSpeed > maxFanSpeed - 1) {
+      showSnackBar();
+    } else {
+      fanSpeed++;
+      updateData('FANSPEED', fanSpeed.toString());
+      update();
+    }
   }
 
   //! Decrement Fan Speed:
   void decFanSpeed() {
-    fanSpeed--;
-    updateData('FANSPEED', fanSpeed.toString());
-    update();
+    if (fanSpeed < minFanSpeed + 1) {
+      showSnackBar();
+    } else {
+      fanSpeed--;
+      updateData('FANSPEED', fanSpeed.toString());
+      update();
+    }
   }
 
   @override
