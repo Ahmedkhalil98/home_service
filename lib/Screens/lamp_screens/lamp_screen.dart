@@ -17,7 +17,8 @@ class LampScreen extends StatelessWidget {
       appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
-          const TitleOfPage(totalDevice: 10,isSingleRoom: true,
+          const TitleOfPage(
+              isActive: true,totalDevice: 10,isSingleRoom: true,
             onDevice: 5,title: "Lamp", imageUrl: AppImageAssets.lamp),
           SizedBox(
             height: 400.h,

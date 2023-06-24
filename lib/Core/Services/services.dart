@@ -9,6 +9,7 @@ class MyServices extends GetxService {
   Future<MyServices> init() async {
     sharedPreferences = await SharedPreferences.getInstance();
       await Firebase.initializeApp(
+        name: 'Home Services',
     options: DefaultFirebaseOptions.currentPlatform,
 );
     return this;

@@ -15,6 +15,7 @@ class GeneratorElectricityPage extends StatelessWidget {
       body: Column(
         children: [
           const TitleOfPage(
+              isActive: true,
             isSingleRoom: true,
             totalDevice: 10,
             onDevice: 5,

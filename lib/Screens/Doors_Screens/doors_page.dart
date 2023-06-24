@@ -30,7 +30,8 @@ class _DoorsPageState extends State<DoorsPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const TitleOfPage(totalDevice: 10,
+            const TitleOfPage(
+              isActive: true,totalDevice: 10,
             isSingleRoom: true,
             onDevice: 5,
               title: "Doors",

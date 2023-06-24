@@ -14,10 +14,13 @@ class TowerElectricityPage extends StatelessWidget {
       appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
-          const TitleOfPage(totalDevice: 10,
+          const TitleOfPage(
+            isActive: true,
+            totalDevice: 10,
             onDevice: 5,
             title: "Tower Electricity",
-            imageUrl: "assets/tower.png",isSingleRoom: true,
+            imageUrl: "assets/tower.png",
+            isSingleRoom: true,
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),

@@ -18,6 +18,7 @@ class ConditionerPage extends StatelessWidget {
       body: Column(
         children: [
           const TitleOfPage(
+              isActive: false,
               isSingleRoom: false,
               totalDevice: 9,
               onDevice: 5,

@@ -10,6 +10,7 @@ class TitleOfPage extends StatelessWidget {
   final int totalDevice;
   final int onDevice;
   final bool isSingleRoom;
+  final bool isActive;
 
   const TitleOfPage({
     super.key,
@@ -18,6 +19,7 @@ class TitleOfPage extends StatelessWidget {
     required this.imageUrl,
     required this.totalDevice,
     required this.onDevice,
+    required this.isActive,
   });
 
   @override
@@ -26,7 +28,7 @@ class TitleOfPage extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 12.h),
       height: 100.h,
       decoration: BoxDecoration(
-        color: white,
+        color: isActive == true ? itemsColor : white,
         border: Border.all(
           width: 1.w,
           color: primaryColor,

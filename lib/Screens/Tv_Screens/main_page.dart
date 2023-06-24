@@ -13,7 +13,8 @@ class MainTVPage extends StatelessWidget {
       appBar: const AppBarWidget(isHomePage: false),
       body: Column(
         children: [
-          const TitleOfPage(totalDevice: 10,isSingleRoom: true,
+          const TitleOfPage(
+              isActive: true,totalDevice: 10,isSingleRoom: true,
             onDevice: 5,
             title: "Television (TV)",
             imageUrl: "assets/television.png",
