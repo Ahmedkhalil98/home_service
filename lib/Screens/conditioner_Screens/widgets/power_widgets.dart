@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:home_service/Controllers/conditioner_controller.dart';
+import 'package:home_service/Controllers/Conditioner/conditioner_controller.dart';
 import 'package:home_service/Core/Constants/app_themes.dart';
 
 class PowerWidget extends StatelessWidget {

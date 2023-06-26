@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:home_service/Core/Functions/snackbar_field_check.dart';
+import 'package:home_service/Data/Models/conditioner_model.dart';
 
 class GetCondetionerData extends GetxController {
   late final dbref = FirebaseDatabase.instance.ref();
@@ -20,6 +21,8 @@ class GetCondetionerData extends GetxController {
   int swing = 0;
   int timer = 0;
   int sleepMode = 0;
+  String? key;
+  ConditionerModel? conditionerModel;
   List<String> modeState = [
     'auto',
     'cool',
@@ -35,28 +38,43 @@ class GetCondetionerData extends GetxController {
     Icons.mode_fan_off,
   ];
   //? Get Data:
-  void getData(String fieldName) {
-    dbref.child('HOMESERVICES/$fieldName').onValue.listen((event) {
-      if (fieldName == 'CONDITIONER/ROOM1/TEMP') {
+  void getData(String fieldName, String key) {
+    dbref.child('HOMESERVICES/CONDITIONER/$key/$fieldName').onValue.listen((event) {
+      if (fieldName == 'TEMP') {
         tempreature = int.parse(event.snapshot.value.toString());
         update();
-      } else if (fieldName == 'CONDITIONER/ROOM1/POWER') {
+      } 
+      else if (fieldName == 'POWER') {
         powerState = int.parse(event.snapshot.value.toString());
         update();
-      } else if (fieldName == 'CONDITIONER/ROOM1/MOOD') {
+      } 
+      else if (fieldName == 'MOOD') {
         mode = event.snapshot.value.toString();
         update();
-      } else if (fieldName == 'CONDITIONER/ROOM1/SWING') {
+      } 
+      else if (fieldName == 'SWING') {
         swing = int.parse(event.snapshot.value.toString());
         update();
-      } else if (fieldName == 'CONDITIONER/ROOM1/TIMER') {
+      }
+      else if (fieldName == 'TIMER') {
         timer = int.parse(event.snapshot.value.toString());
         update();
-      } else if (fieldName == 'CONDITIONER/ROOM1/SLEEPMODE') {
+      } 
+      else if (fieldName == 'SLEEPMODE') {
         sleepMode = int.parse(event.snapshot.value.toString());
         update();
-      } else if (fieldName == 'CONDITIONER/ROOM1/FANSPEED') {
+      } 
+      else if (fieldName == 'FANSPEED') {
         fanSpeed = int.parse(event.snapshot.value.toString());
+        update();
+      } else if (fieldName == 'MAXFANSPEED') {
+        maxFanSpeed = int.parse(event.snapshot.value.toString());
+        update();
+      } else if (fieldName == 'MAXTEMP') {
+        maxTemp = int.parse(event.snapshot.value.toString());
+        update();
+      } else if (fieldName == 'MINTEMP') {
+        minTemp = int.parse(event.snapshot.value.toString());
         update();
       }
     });
@@ -65,7 +83,7 @@ class GetCondetionerData extends GetxController {
   //? Update Data :
   void updateData(String updatedData, String newVal) async {
     DatabaseReference ref =
-        FirebaseDatabase.instance.ref("HOMESERVICES/CONDITIONER/ROOM1/");
+        FirebaseDatabase.instance.ref("HOMESERVICES/CONDITIONER/$key/");
     await ref.update({
       updatedData: newVal,
     });
@@ -117,12 +135,14 @@ class GetCondetionerData extends GetxController {
 
   @override
   void onInit() {
-    getData('CONDITIONER/ROOM1/TEMP');
-    getData('CONDITIONER/ROOM1/POWER');
-    getData('CONDITIONER/ROOM1/MOOD');
-    getData('CONDITIONER/ROOM1/SWING');
-    getData('CONDITIONER/ROOM1/TIMER');
-    getData('CONDITIONER/ROOM1/SLEEPMODE');
+    conditionerModel = Get.arguments['conditionerModel'];
+    key = conditionerModel!.key;
+    getData('TEMP', key!);
+    getData('POWER', key!);
+    getData('MOOD', key!);
+    getData('SWING', key!);
+    getData('TIMER', key!);
+    getData('SLEEPMODE', key!);
     super.onInit();
   }
 }

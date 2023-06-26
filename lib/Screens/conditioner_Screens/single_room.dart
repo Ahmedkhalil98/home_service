@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:home_service/Controllers/conditioner_controller.dart';
+import 'package:home_service/Controllers/Conditioner/conditioner_controller.dart';
 import 'package:home_service/Core/Constants/image_link.dart';
 import 'package:home_service/General_Widgets/App_Bar_widget.dart';
 import 'package:home_service/General_Widgets/Title_of_Page.dart';
@@ -24,11 +24,11 @@ class SingleRoomConditioner extends StatelessWidget {
         children: [
           GetBuilder<GetCondetionerData>(builder: (controller) {
             return TitleOfPage(
-                isActive: controller.powerState == 1 ? true : false,
+                isActive: controller.powerState == '1' ? true : false,
                 isSingleRoom: true,
                 totalDevice: 10,
                 onDevice: 5,
-                title: "Room 1",
+                title: controller.key!,
                 imageUrl: AppImageAssets.conditioner);
           }),
           const PowerWidget(),

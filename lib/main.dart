@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:home_service/Core/Services/services.dart';
+import 'package:home_service/Screens/conditioner_Screens/conditioner_page.dart';
 import 'package:home_service/Screens/conditioner_Screens/single_room.dart';
 import 'package:home_service/firebase_options.dart';
 import 'package:home_service/root.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
 
-          home: const SingleRoomConditioner(),
+          home: const ConditionerPage(),
           //getPages: routes,
         );
       },
